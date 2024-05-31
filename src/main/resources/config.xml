@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<beans xmlns="http://www.springframework.org/schema/beans"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
@@ -10,4 +12,9 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 <property name="studentName" value="tyna"/>
 <property name="studentAddress" value="hyderabad"/>
 </bean>
+<!--    using constructor injection , it will by default call the constructor having matching parameters according to the value-->
+    <bean class="org.springbeans.Student" name="student2">
+        <constructor-arg value="4"/>
+        <constructor-arg value="yukkta"/>
+    </bean>
 </beans>
