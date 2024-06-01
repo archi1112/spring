@@ -7,7 +7,8 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
 
     <!-- bean definitions here -->
-<bean class="org.springbeans.Student" id="student1">
+<!--    to call the destroy method we need abstractapllcontext as register function is in this -->
+<bean class="org.springbeans.Student" id="student1" init-method="init" destroy-method="destroy">
 <property name="studentId" value="2"/>
 <property name="studentName" value="tyna"/>
 <property name="studentAddress" value="hyderabad"/>

@@ -48,6 +48,17 @@ public class Student {
         super();
     }
 
+
+//    lifecycle methods
+//    names of these methods can be changed but signature must remain same
+//    define these methods in beans in configuration file
+    public void init(){
+        System.out.println("Student initialised");
+    }
+
+    public void destroy(){
+        System.out.println("student destroyed");
+    }
     @Override
     public String toString() {
         return "Student{" +
